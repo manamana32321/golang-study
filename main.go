@@ -32,7 +32,23 @@ func pointer() {
 	showValue(b)
 }
 
+func makeArray() (array [5]string) {
+	array = [5]string{"a", "b", "c"}
+	array[3] = "d"
+	array[4] = "e"
+	return array
+}
+
+func makeSlice() (slice []string) {
+	slice = []string{"a", "b", "c"}
+	slice = append(slice, "d")
+	slice = append(slice, "e")
+	return slice
+}
+
 func main() {
 	fmt.Println(is반오십(24))
 	pointer()
+	makeArray()
+	fmt.Println(makeSlice())
 }
