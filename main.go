@@ -11,6 +11,28 @@ func is반오십(age int) (result bool) {
 	return result
 }
 
+func showAddress(a int) {
+	fmt.Println(&a)
+}
+
+func showAddress2(a *int) {
+	fmt.Println(a)
+}
+
+func showValue(a *int) {
+	fmt.Println(*a)
+}
+
+func pointer() {
+	a := 2
+	b := &a
+	a = 10
+	fmt.Println(a, *b)
+	*b = 20
+	showValue(b)
+}
+
 func main() {
 	fmt.Println(is반오십(24))
+	pointer()
 }
