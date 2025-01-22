@@ -46,6 +46,14 @@ func makeSlice() (slice []string) {
 	return slice
 }
 
+func makeMap() (m map[string]string) {
+	m = make(map[string]string)
+	m["a"] = "A"
+	m["b"] = "B"
+	m["c"] = "C"
+	return m
+}
+
 func main() {
 	fmt.Println(is반오십(24))
 	pointer()
